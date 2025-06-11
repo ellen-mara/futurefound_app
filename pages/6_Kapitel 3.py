@@ -23,6 +23,37 @@ st.markdown("""
             color: #ffffff !important;
         }
     }
+
+    /* Button-Text und Hintergrund überall erzwingen */
+.stButton > button {
+    background-color: #393e46 !important;
+    color: #fff !important;
+    border: 2px solid #00adb5 !important;
+    font-weight: 500 !important;
+    font-size: 1em !important;
+    border-radius: 8px !important;
+    text-shadow: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+/* Mobile: Button-Styles noch einmal explizit überschreiben */
+@media only screen and (max-width: 768px) {
+    .stButton > button {
+        background-color: #393e46 !important;
+        color: #fff !important;
+        border: 2px solid #00adb5 !important;
+        font-weight: 600 !important;
+        font-size: 1.1em !important;
+        border-radius: 8px !important;
+        text-shadow: none !important;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        appearance: none !important;
+    }
+}
+
     </style>
 """, unsafe_allow_html=True)
 
