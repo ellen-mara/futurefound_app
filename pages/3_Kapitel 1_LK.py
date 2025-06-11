@@ -78,6 +78,17 @@ div[role="radiogroup"] label {
     font-size: 1.08em !important;
     font-weight: 400 !important;
 }
+
+.feedback-error {
+    background-color: #8B0000 !important;  /* dunkleres, aber kontrastreiches Rot */
+    color: #fff !important;                 /* weißer Text für bessere Lesbarkeit */
+    border-left: 6px solid #ff6363 !important;
+    border-radius: 10px;
+    padding: 1em 1.2em;
+    margin-top: 1.2em;
+    font-size: 1.08em;
+    font-weight: 500;
+}
      
     </style>
 """, unsafe_allow_html=True)
