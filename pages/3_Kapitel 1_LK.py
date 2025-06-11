@@ -65,6 +65,19 @@ st.markdown("""
         appearance: none !important;
     }
 }
+
+/* Radio-Label (Frage) und Optionen IMMER weiß machen */
+[data-testid="stWidgetLabel"] {
+    color: #fff !important;
+    font-weight: 500 !important;
+    font-size: 1.1em !important;
+}
+
+div[role="radiogroup"] label {
+    color: #fff !important;
+    font-size: 1.08em !important;
+    font-weight: 400 !important;
+}
      
     </style>
 """, unsafe_allow_html=True)
