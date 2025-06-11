@@ -10,6 +10,37 @@ st.markdown("""
     .outro-box { background: #393e46; color: #fff; border-radius: 14px; padding: 1.3em 1.6em; margin: 1.6em 0 1.6em 0; border-left: 7px solid #00adb5; font-size: 1.12em; }
     .congrats-box { background: #eafff3; color: #23272f; border-radius: 14px; padding: 1.3em 1.6em; margin: 1.6em 0 1.6em 0; border-left: 7px solid #00c897; font-size: 1.18em; font-weight: bold;}
     .voiceover { font-style: italic; color: #bfc9d1; font-size: 1.05em; margin: 1.1em 0 1.1em 0;}
+    
+/* Button-Text und Hintergrund überall erzwingen */
+.stButton > button {
+    background-color: #393e46 !important;
+    color: #fff !important;
+    border: 2px solid #00adb5 !important;
+    font-weight: 500 !important;
+    font-size: 1em !important;
+    border-radius: 8px !important;
+    text-shadow: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+/* Mobile: Button-Styles noch einmal explizit überschreiben */
+@media only screen and (max-width: 768px) {
+    .stButton > button {
+        background-color: #393e46 !important;
+        color: #fff !important;
+        border: 2px solid #00adb5 !important;
+        font-weight: 600 !important;
+        font-size: 1.1em !important;
+        border-radius: 8px !important;
+        text-shadow: none !important;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        appearance: none !important;
+    }
+}
+
     </style>
 """, unsafe_allow_html=True)
 
