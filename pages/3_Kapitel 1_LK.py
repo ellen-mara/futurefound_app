@@ -1,9 +1,8 @@
 import streamlit as st
 
-# --- Stil und Schrittzähler (wie Seite 5) ---
 st.markdown("""
     <style>
-    .stApp { background: #23272f !important; }
+    /* Individuelle Styles (Stepper, Buttons, Feedback, Radio, etc.) */
     .main-title { font-size: 2.1em; font-weight: bold; color: #fff; text-align: center; }
     .subtitle { color: #d9e0e7; font-size: 1.18em; margin-bottom: 1.4em; text-align: center; }
     .white-divider { height: 2px; width: 100%; background: #fff; margin: 32px 0 28px 0; border: none; border-radius: 2px; box-shadow: 0 1px 4px #0001; }
@@ -14,85 +13,79 @@ st.markdown("""
     .stepper-bar { flex: 1; height: 6px; background: #393e46; border-radius: 3px; margin: 0 3px; position: relative; min-width: 28px; max-width: 70px; }
     .stepper-bar-fill { height: 100%; background: #00adb5; border-radius: 3px; position: absolute; left: 0; top: 0; transition: width 0.3s; }
 
-
     /* Button-Text und Hintergrund überall erzwingen */
-.stButton > button {
-    background-color: #393e46 !important;
-    color: #fff !important;
-    border: 2px solid #00adb5 !important;
-    font-weight: 500 !important;
-    font-size: 1em !important;
-    border-radius: 8px !important;
-    text-shadow: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
-}
-
-/* Mobile: Button-Styles noch einmal explizit überschreiben */
-@media only screen and (max-width: 768px) {
     .stButton > button {
         background-color: #393e46 !important;
         color: #fff !important;
         border: 2px solid #00adb5 !important;
-        font-weight: 600 !important;
-        font-size: 1.1em !important;
+        font-weight: 500 !important;
+        font-size: 1em !important;
         border-radius: 8px !important;
         text-shadow: none !important;
         -webkit-appearance: none !important;
         -moz-appearance: none !important;
         appearance: none !important;
     }
-}
 
-/* Radio-Label (Frage) und Optionen IMMER weiß machen */
-[data-testid="stWidgetLabel"] {
-    color: #fff !important;
-    font-weight: 500 !important;
-    font-size: 1.1em !important;
-}
+    /* Mobile: Button-Styles noch einmal explizit überschreiben */
+    @media only screen and (max-width: 768px) {
+        .stButton > button {
+            background-color: #393e46 !important;
+            color: #fff !important;
+            border: 2px solid #00adb5 !important;
+            font-weight: 600 !important;
+            font-size: 1.1em !important;
+            border-radius: 8px !important;
+            text-shadow: none !important;
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+        }
+    }
 
-div[role="radiogroup"] label {
-    color: #fff !important;
-    font-size: 1.08em !important;
-    font-weight: 400 !important;
-}
+    /* Radio-Label (Frage) und Optionen IMMER weiß machen */
+    [data-testid="stWidgetLabel"] {
+        color: #fff !important;
+        font-weight: 500 !important;
+        font-size: 1.1em !important;
+    }
+    div[role="radiogroup"] label {
+        color: #fff !important;
+        font-size: 1.08em !important;
+        font-weight: 400 !important;
+    }
 
-.feedback-error {
-    background-color: #8B0000 !important;  /* dunkleres, aber kontrastreiches Rot */
-    color: #fff !important;                 /* weißer Text für bessere Lesbarkeit */
-    border-left: 6px solid #ff6363 !important;
-    border-radius: 10px;
-    padding: 1em 1.2em;
-    margin-top: 1.2em;
-    font-size: 1.08em;
-    font-weight: 500;
-}
+    .feedback-error {
+        background-color: #8B0000 !important;
+        color: #fff !important;
+        border-left: 6px solid #ff6363 !important;
+        border-radius: 10px;
+        padding: 1em 1.2em;
+        margin-top: 1.2em;
+        font-size: 1.08em;
+        font-weight: 500;
+    }
 
-    /* Erzwinge dein aktuelles Theme auf allen Geräten */
+    /* --- GANZ AM ENDE: Theme-Overrides und Media Queries, NUR EINMAL! --- */
     .stApp {
         background-color: #23272f !important;
         color: #ffffff !important;
     }
-    
-    /* Überschreibe System-Theme-Preferences */
     @media (prefers-color-scheme: light), (prefers-color-scheme: dark) {
         .stApp {
             background-color: #23272f !important;
             color: #ffffff !important;
         }
     }
-    
-    /* Mobile-spezifische Absicherung */
     @media only screen and (max-width: 768px) {
         .stApp {
             background-color: #23272f !important;
             color: #ffffff !important;
         }
     }
-     
     </style>
 """, unsafe_allow_html=True)
+
 
 def stepper(current, total):
     balls = []
