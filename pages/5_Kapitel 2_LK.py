@@ -22,7 +22,15 @@ st.markdown("""
     }
     
     /* Überschreibe System-Theme-Preferences */
-    @media (prefers-color-scheme: light), (prefers-color-scheme: dark) {
+    @media (prefers-color-scheme: light) {
+        .stApp {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+        }
+    }
+
+    /* Überschreibe System-Theme-Preferences */
+    @media (prefers-color-scheme: dark) {
         .stApp {
             background-color: #23272f !important;
             color: #ffffff !important;
