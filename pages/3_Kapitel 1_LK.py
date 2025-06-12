@@ -13,62 +13,7 @@ st.markdown("""
     .stepper-ball.done { background: linear-gradient(135deg, #00adb5 70%, #393e46 100%); color: #fff; border: 2.5px solid #00adb5; }
     .stepper-bar { flex: 1; height: 6px; background: #393e46; border-radius: 3px; margin: 0 3px; position: relative; min-width: 28px; max-width: 70px; }
     .stepper-bar-fill { height: 100%; background: #00adb5; border-radius: 3px; position: absolute; left: 0; top: 0; transition: width 0.3s; }
-
-
-    /* Button-Text und Hintergrund überall erzwingen */
-.stButton > button {
-    background-color: #393e46 !important;
-    color: #fff !important;
-    border: 2px solid #00adb5 !important;
-    font-weight: 500 !important;
-    font-size: 1em !important;
-    border-radius: 8px !important;
-    text-shadow: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
-}
-
-/* Mobile: Button-Styles noch einmal explizit überschreiben */
-@media only screen and (max-width: 768px) {
-    .stButton > button {
-        background-color: #393e46 !important;
-        color: #fff !important;
-        border: 2px solid #00adb5 !important;
-        font-weight: 600 !important;
-        font-size: 1.1em !important;
-        border-radius: 8px !important;
-        text-shadow: none !important;
-        -webkit-appearance: none !important;
-        -moz-appearance: none !important;
-        appearance: none !important;
-    }
-}
-
-/* Radio-Label (Frage) und Optionen IMMER weiß machen */
-[data-testid="stWidgetLabel"] {
-    color: #fff !important;
-    font-weight: 500 !important;
-    font-size: 1.1em !important;
-}
-
-div[role="radiogroup"] label {
-    color: #fff !important;
-    font-size: 1.08em !important;
-    font-weight: 400 !important;
-}
-
-.feedback-error {
-    background-color: #8B0000 !important;  /* dunkleres, aber kontrastreiches Rot */
-    color: #fff !important;                 /* weißer Text für bessere Lesbarkeit */
-    border-left: 6px solid #ff6363 !important;
-    border-radius: 10px;
-    padding: 1em 1.2em;
-    margin-top: 1.2em;
-    font-size: 1.08em;
-    font-weight: 500;
-}
-
+   
     /* Erzwinge dein aktuelles Theme auf allen Geräten */
     .stApp {
         background-color: #23272f !important;
