@@ -66,6 +66,11 @@ st.markdown("""
         appearance: none !important;
     }
 }
+
+/* Für alle Widget-Texte */
+label, span, div, p {
+    color: #fff !important;
+}
     
     </style>
 """, unsafe_allow_html=True)
